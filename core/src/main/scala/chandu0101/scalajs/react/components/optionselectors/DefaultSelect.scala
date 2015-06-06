@@ -9,9 +9,7 @@ import scala.scalajs.js
 
 
 
-/**
- * Created by chandrasekharkode .
- */
+
 object DefaultSelect {
 
   class Backend(t: BackendScope[Props, _]) {
@@ -35,5 +33,5 @@ object DefaultSelect {
 
   case class Props(label : String,options : List[String] , value : String , onChange : StringUnit)
 
-  def apply(ref: js.UndefOr[String] = "", key: js.Any = {},label : String,options : List[String] , value : String , onChange : StringUnit) = component.set(key, ref)(Props(label,options,value,onChange))
+  def apply(props : Props,ref: js.UndefOr[String] = "", key: js.Any = {}) = component.set(key, ref)(props)
 }

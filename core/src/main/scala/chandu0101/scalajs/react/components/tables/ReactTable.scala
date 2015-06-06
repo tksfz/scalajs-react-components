@@ -166,7 +166,7 @@ object ReactTable {
       }
      <.div(^.cls := "settings")(
         <.span(^.float := "right")(<.strong("Total : " + s.filteredModels.size)),
-        DefaultSelect(label = "Page Size : ", options = options, value = value, onChange = b.onPageSizeChange)
+        DefaultSelect(DefaultSelect.Props(label = "Page Size : ", options = options, value = value, onChange = b.onPageSizeChange))
       )
     }).build
 

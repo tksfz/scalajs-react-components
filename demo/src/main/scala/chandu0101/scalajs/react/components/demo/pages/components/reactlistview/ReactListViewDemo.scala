@@ -7,9 +7,7 @@ import japgolly.scalajs.react.vdom.prefix_<^._
 import org.scalajs.dom
 
 
-/**
- * Created by chandrasekharkode .
- */
+
 object ReactListViewDemo {
 
   val code =
@@ -22,9 +20,9 @@ object ReactListViewDemo {
 
   object Style {
 
-    def listViewComponent = Seq(^.float := "left" , ^.marginBottom := "2em")
+    def listViewComponent = Seq(^.float := "left", ^.marginBottom := "2em")
 
-    def selectedContent = Seq(^.alignSelf := "center" , ^.margin := "0 40px")
+    def selectedContent = Seq(^.alignSelf := "center", ^.margin := "0 40px")
 
     def listViewDemo = Seq(^.display := "flex")
   }
@@ -34,9 +32,9 @@ object ReactListViewDemo {
   class Backend(t: BackendScope[_, _]) {
 
     def onItemSelect(item: String) = {
-        val content =
-          s"Selected Item : $item <br>"
-        dom.document.getElementById("listviewcontent").innerHTML = content
+      val content =
+        s"Selected Item : $item <br>"
+      dom.document.getElementById("listviewcontent").innerHTML = content
     }
 
   }
@@ -49,15 +47,15 @@ object ReactListViewDemo {
       <.h3("Demo"),
       CodeExample(code)(
         <.div(Style.listViewDemo)(
-          ReactListView(items = data, showSearchBox = true ,onItemSelect = B.onItemSelect),
-          <.strong(^.id := "listviewcontent" ,Style.selectedContent)("Selected Content Here")
+          ReactListView(items = data, showSearchBox = true, onItemSelect = B.onItemSelect),
+          <.strong(^.id := "listviewcontent", Style.selectedContent)("Selected Content Here")
         )
       )
     )
   }).buildU
 
 
-  lazy val data = List("ScalaJS","JavasScript","ReactJS","Html","Css","Software","Browser")
+  lazy val data = List("ScalaJS", "JavasScript", "ReactJS", "Html", "Css", "Software", "Browser")
 
   def apply() = component()
 
