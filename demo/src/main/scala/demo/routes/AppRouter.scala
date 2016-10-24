@@ -141,7 +141,7 @@ object AppRouter {
     ),
     HomePage.ComponentInfo(
       name = "Semantic UI",
-      imagePath = g.elementaluiImage.toString, // TODO
+      imagePath = g.semanticuiImage.toString, // TODO
       route = SuiPages(SuiRouteModule.Info),
       tags = Stream("semanticui", "semantic", "framework")
     ),
