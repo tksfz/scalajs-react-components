@@ -7,7 +7,8 @@ import scala.scalajs.js
 
 case class SuiHeader(
   key:      js.UndefOr[String]        = js.undefined,
-  ref:      js.UndefOr[String]        = js.undefined
+  ref:      js.UndefOr[String]        = js.undefined,
+  as:       js.UndefOr[String]        = js.undefined
 ) {
   def apply(children: ReactNode*) = {
     val props = JSMacro[SuiHeader](this)

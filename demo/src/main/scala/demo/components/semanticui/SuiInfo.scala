@@ -12,7 +12,7 @@ object SuiInfo {
       InfoTemplate(componentFilePath = "semanticui/")(
         <.div(
           <.h3("semantic-ui "),
-          SuiHeader()("hello world")
+          SuiHeader(as = "h1")("hello world")
         )
       )
     }).build
