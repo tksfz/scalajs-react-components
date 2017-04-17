@@ -1,0 +1,3 @@
+from the Semantic-UI-React repo
+
+cp -R commonjs ~/scalajs-react-components/demo/node_modules/semantic-ui-react/dist
